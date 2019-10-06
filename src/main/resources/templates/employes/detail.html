@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.springframework.org/schema/jdbc">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalles del empleo</title>
+    <script type="application/ld+json" th:utext="${jsonld}"></script>
+</head>
+<body>
+<h1>Empleo <span th:text="${employee.name}"></span></h1>
+El salario del empreo es: <span th:text="${employee.salary}"></span>
+
+<a href="/">Volver</a>
+
+</body>
+</html>

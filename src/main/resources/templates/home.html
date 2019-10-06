@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.springframework.org/schema/jdbc">
+<head>
+    <meta charset="UTF-8">
+    <title>Choristar</title>
+</head>
+<body>
+<div itemscope itemtype="http://schema.org/Corporation">
+    <center><img  itemprop="logo" src="images/logo.PNG"></center>
+    <span hidden itemprop="legalName">Movistar</span>
+<h1><center>Bienvenidos a todos</center></h1>
+    <h2>Estos son los puestos de trabajo disponibles este mes</h2>
+    <ol >
+        <li th:each="m : ${employee}">
+            <a th:href="'/employee/' + ${m.id}">
+                <span th:text="${m.name}"></span>
+                -
+                <span th:text="${m.salary}"></span>
+            </a>
+        </li>
+    </ol>
+
+    <div style="background-color: #51C6D9">
+        <center>
+        <h3>Datos de la empresa</h3>
+        <p><span>Telefono: </span><span itemprop="location"> 949506013</span></p>
+        <p><span>Direccion: </span><span itemprop="address"> America 1563</span></p>
+        </center>
+    </div>
+</div>
+</body>
+</html>
